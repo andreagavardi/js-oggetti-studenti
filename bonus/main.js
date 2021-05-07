@@ -63,6 +63,7 @@ for (var i = 0; i < studenti.length; i++ ){
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 var studenteNuovo = {};
 
+setTimeout(function() {
 studenteNuovo.nome = prompt('inserisci il tuo nome');
 studenteNuovo.cognome = prompt('inserisci il tuo cognome');
 studenteNuovo.età = prompt('inserisci quanti anni hai');
@@ -71,5 +72,9 @@ studenti.push(studenteNuovo);
 
 container_2El.insertAdjacentHTML('beforeend', `
 
-        <div class = "new"> ${studenti[studenti.length - 1].nome} ${studenti[studenti.length - 1].cognome} </div>
-`);
+    <div class = "new">
+     ${studenti[studenti.length - 1].nome} ${studenti[studenti.length - 1].cognome}
+    </div>
+`)
+
+}, 5000);
